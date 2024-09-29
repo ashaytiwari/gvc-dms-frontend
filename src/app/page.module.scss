@@ -1,0 +1,51 @@
+#loginPageMain {
+  background-color: var(--white-offshade);
+  display: grid;
+  grid-auto-columns: 50%;
+  grid-auto-flow: column;
+  min-height: 100vh;
+  padding: 20px;
+
+  #loginCoverImageSection {
+    border-radius: 20px;
+    position: relative;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #loginFormSection {
+    padding: 20px 35px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+
+    .appLogo{
+      margin: 0 auto 20px;
+      width: 50px;
+    }
+
+    .formHeadingSection {
+      text-align: center;
+      margin-top: 70px;
+
+      .heading {
+        font-size: 30px;
+        margin: 10px;
+        color: var(--text-color);
+      }
+
+      .subHeading {
+        font-size: 16px;
+        color: var(--tertiary-color);
+      }
+    }
+
+    .loginForm {
+      display: grid;
+      grid-template-rows: max-content;
+      row-gap: 25px;
+      padding: 40px 70px;
+    }
+  }
+}
