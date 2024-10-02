@@ -1,9 +1,16 @@
+@import '@/styles/mediaQuery.scss';
+
 #loginPageMain {
   display: grid;
   grid-auto-columns: 50%;
   grid-auto-flow: column;
   min-height: 100vh;
   padding: 20px;
+
+  @include respond-to(md) {
+    padding: 0;
+    grid-auto-columns: 100%;
+  }
 
   #loginCoverImageSection {
     border-radius: 20px;
@@ -12,6 +19,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include respond-to(md) {
+      display: none;
+    }
   }
 
   #loginFormSection {
@@ -19,7 +30,7 @@
     background-color: var(--white-color);
     border-radius: 10px;
 
-    .appLogo{
+    .appLogo {
       margin: 0 auto 20px;
       width: 50px;
     }
@@ -45,6 +56,14 @@
       grid-template-rows: max-content;
       row-gap: 25px;
       padding: 40px 70px;
+
+      @include respond-to(lg) {
+        padding: 30px;
+      }
+
+      @include respond-to(xs) {
+        padding: 30px 0;
+      }
     }
   }
 }

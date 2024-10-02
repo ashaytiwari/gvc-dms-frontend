@@ -1,0 +1,22 @@
+// _mixins.scss
+$breakpoints: (
+  'xxl': 1400px,    // Extra extra large devices (≥1400px)
+  'xl': 1200px,     // Extra large devices (≥1200px)
+  'lg': 992px,      // Large devices (≥992px)
+  'md': 768px,      // Medium devices (≥768px)
+  'sm': 576px,      // Small devices (≥576px)
+  'xs': 450px       // Extra small devices (phones, <576px)
+);
+
+@mixin respond-to($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value == null {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }  @else {
+    @media (max-width: #{$value}) {
+      @content;
+    }
+    
+  }
+}
