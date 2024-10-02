@@ -1,0 +1,45 @@
+@import '@/styles/mediaQuery.scss';
+
+#offlineWindowMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+  min-height: 100vh;
+
+  .offlineImageContainer {
+    width: 300px;
+
+    .offlineImage {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    width: 400px;
+
+    @include respond-to(sm) {
+      width: 300px;
+    }
+
+    h3 {
+      font-size: 30px;
+      color: var(--text-color);
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--tertiary-color);
+      text-align: center;
+    }
+  }
+
+}

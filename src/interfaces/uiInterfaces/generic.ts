@@ -12,3 +12,7 @@ export interface ISecureInputFieldProps {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void,
   onBlur: (event: any) => void
 }
+
+export interface IRootProviderProps {
+  children: React.ReactNode
+}

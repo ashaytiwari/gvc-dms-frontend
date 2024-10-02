@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import { NextUIProvider } from "@nextui-org/react";
+import RootProvider from "@/components/RootProvider";
 
 import "./globals.scss";
 
@@ -26,9 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body {...bodyAttributes}>
-        <NextUIProvider>
+        <RootProvider>
           {children}
-        </NextUIProvider>
+        </RootProvider>
       </body>
     </html>
   );
